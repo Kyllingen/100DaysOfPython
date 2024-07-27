@@ -7,15 +7,23 @@ Some exercises are done in Auditorium as per course notes and the results from t
 ## Things learned in each lesson
 * Day 1 - Working with Variables in Python
     * input()
-    * len()
-    * int()
+    * len() - get length of chars
+    * int() - convert to int
     * string concatenation
 * Day 2 - Understanding Data Types and How to Manipulate Strings
-    * type()
-    * str()
-    * float()
+    * type() - check type
+    * str() - convert to str
+    * float() - convert to float
     * mathematical operators (+, -, /, *, **) and priorities (PEMDAS)
-    * round()
+    * round() - round to # decimals
     * floor() or //
     * f strings
-    * format()
+    * format() - format string
+* Day 3 - Conditional Statements, Logical Operators, Code Blocks and Scope
+    * if/else, elif
+    * logical operators > <, >=, <=, ==, !=
+    * modulo %
+    * nesting of conditionals
+    * and, or, not
+    * lower() - make str all lowercase
+    * count() - count numbers of occurrences
