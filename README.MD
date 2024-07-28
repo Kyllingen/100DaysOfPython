@@ -27,3 +27,9 @@ Some exercises are done in Auditorium as per course notes and the results from t
     * and, or, not
     * lower() - make str all lowercase
     * count() - count numbers of occurrences
+* Day 4 - Randomisation and Python Lists
+    * random module , ex.random.randint(a, b)
+    * lists  [itemA, itemB, ....]
+    * index (1, -1)
+    * append()
+    * nested lists [[],[], ...]
