@@ -33,3 +33,6 @@ Some exercises are done in Auditorium as per course notes and the results from t
     * index (1, -1)
     * append()
     * nested lists [[],[], ...]
+* Day 5 - Loops
+    * for loops - for item in listOfItems
+    * range() - range(a, b, stepSize)
