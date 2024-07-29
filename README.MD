@@ -35,4 +35,9 @@ Some exercises are done in Auditorium as per course notes and the results from t
     * nested lists [[],[], ...]
 * Day 5 - Loops
     * for loops - for item in listOfItems
-    * range() - range(a, b, stepSize)
+    * range() - for i in range(a, b, stepSize)
+    * random.shuffle()
+* Day 6 - Code Blocks, Functions, While Loops
+    * define functions - def functionName(params...):
+    * indentation
+    * while - while something_is_true:
