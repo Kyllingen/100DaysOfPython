@@ -41,3 +41,6 @@ Some exercises are done in Auditorium as per course notes and the results from t
     * define functions - def functionName(params...):
     * indentation
     * while - while something_is_true:
+* Day 7 - knowledge of all previous days + 
+    * modules
+    * create hangman game
