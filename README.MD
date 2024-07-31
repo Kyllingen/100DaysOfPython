@@ -44,3 +44,7 @@ Some exercises are done in Auditorium as per course notes and the results from t
 * Day 7 - knowledge of all previous days + 
     * modules
     * create hangman game
+* Day 8 - Functions with inputs
+    * Caesar chiper project
+    * arguments vs parameters
+    * positional arguments
