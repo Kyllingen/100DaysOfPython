@@ -48,3 +48,7 @@ Some exercises are done in Auditorium as per course notes and the results from t
     * Caesar chiper project
     * arguments vs parameters
     * positional arguments
+* Day 9 - Dictionaries & Nesting
+    * Auction program
+    * Nesting lists, dictionaries
+    * Mixing lists and dictionaries
