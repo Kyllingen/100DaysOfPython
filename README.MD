@@ -52,3 +52,11 @@ Some exercises are done in Auditorium as per course notes and the results from t
     * Auction program
     * Nesting lists, dictionaries
     * Mixing lists and dictionaries
+* Day 10 - Functions with outputs
+    * calculator project
+    * return statements
+    * docStrings - """ the statement to show """
+    * recursion
+    
+    
+    
