@@ -57,6 +57,8 @@ Some exercises are done in Auditorium as per course notes and the results from t
     * return statements
     * docStrings - """ the statement to show """
     * recursion
+* Day 11 - Blackjack project
+    * Use previous lessons to build a blackjack game
     
     
     
