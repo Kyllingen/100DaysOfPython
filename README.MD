@@ -65,6 +65,11 @@ Some exercises are done in Auditorium as per course notes and the results from t
     * Namespaces vs scopes
     * No block scope in Python
     * constants
+* Day 13 - Debugging
+    * How to find, repdroduce and get rid of bugs
+    * Describing problems to help debug
+    * try / except
+    * Using debugger
     
     
     
