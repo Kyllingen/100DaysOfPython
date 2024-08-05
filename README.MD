@@ -59,6 +59,12 @@ Some exercises are done in Auditorium as per course notes and the results from t
     * recursion
 * Day 11 - Blackjack project
     * Use previous lessons to build a blackjack game
+* Day 12 - Scopes & Number Guessing Game
+    * Number guessing project
+    * Local vs global scopes
+    * Namespaces vs scopes
+    * No block scope in Python
+    * constants
     
     
     
