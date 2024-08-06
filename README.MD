@@ -70,6 +70,8 @@ Some exercises are done in Auditorium as per course notes and the results from t
     * Describing problems to help debug
     * try / except
     * Using debugger
+* Day 14 - Higher Lower game project
+
     
     
     
