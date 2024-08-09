@@ -71,6 +71,7 @@ Some exercises are done in Auditorium as per course notes and the results from t
     * try / except
     * Using debugger
 * Day 14 - Higher Lower game project
+* Day 15 - Coffee Machine project
 
     
     
