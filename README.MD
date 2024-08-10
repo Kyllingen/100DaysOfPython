@@ -72,6 +72,12 @@ Some exercises are done in Auditorium as per course notes and the results from t
     * Using debugger
 * Day 14 - Higher Lower game project
 * Day 15 - Coffee Machine project
+* Day 16 - Object Oriented Programming
+    * Classes and Objects
+    * what an object has (data), what it does (methods)
+    * packages - 3rd party packages 
+    * PyPi - package manager
+
 
     
     
