@@ -77,7 +77,10 @@ Some exercises are done in Auditorium as per course notes and the results from t
     * what an object has (data), what it does (methods)
     * packages - 3rd party packages 
     * PyPi - package manager
-
+* Day 17 - Benefits of OOP
+    * Quiz Project
+    * init methods, class constructors
+    * methods and attributes
 
     
     
