@@ -20,7 +20,7 @@ def divide(a, b):
         return "Error: Division by zero"
     return a / b
 
-mathOperators = {
+math_operators = {
     "+": add,
     "-": subtract,
     "*": multiply,
@@ -32,15 +32,15 @@ logo = calculator_art.logo
 
 # Calculations
 def calculator():
-    calculateNext = True
+    calculate_next = True
     result = None
     
-    while calculateNext:
+    while calculate_next:
         
         if result == None:
             num1 = float(input("Enter the first number: "))
 
-            for operator in mathOperators:
+            for operator in math_operators:
                 print(operator)
             
         else:
@@ -50,17 +50,17 @@ def calculator():
         num2 = float(input("Enter the next number: "))
 
         #Calculation
-        mathFunction = mathOperators[operator]
-        result = mathFunction(num1, num2)
+        math_function = math_operators[operator]
+        result = math_function(num1, num2)
         print(f"{num1} {operator} {num2} = {result}")
         
-        continueCalculation = input(f"Type 'y' to continue calculating with {result}, or type 'n' to start a new calculation, 'q' to quit: ").lower()
+        continue_calculation = input(f"Type 'y' to continue calculating with {result}, or type 'n' to start a new calculation, 'q' to quit: ").lower()
         
-        if continueCalculation != "y":
-            calculateNext = False
+        if continue_calculation != "y":
+            calculate_next = False
             calculator() 
-        elif continueCalculation == "q":
-            calculateNext = False
+        elif continue_calculation == "q":
+            calculate_next = False
             print("Goodbye!")
 
 #starting point

@@ -10,16 +10,16 @@ shift = int(input("Enter the shift number:\n"))
 # caesar()
 
 def caesar(direction, text, shift):
-    outputText = ""
+    output_text = ""
     
     if direction == "decode":
         shift *= -1
         
     for letter in text:
         position = alphabet.index(letter)
-        newPosition = ((position + shift) % (len(alphabet)))
-        outputText += alphabet[newPosition]
+        new_position = ((position + shift) % (len(alphabet)))
+        output_text += alphabet[new_position]
         
-    print(f"The {direction}d text is {outputText}")
+    print(f"The {direction}d text is {output_text}")
 
 caesar(direction, text, shift)

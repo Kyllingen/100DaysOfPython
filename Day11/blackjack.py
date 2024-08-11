@@ -9,104 +9,104 @@ logo = blackjack_art.logo
 cards = [11,2,3,4,5,6,7,8,9,10,10,10,10]
 
 
-def drawCard():
+def draw_card():
     '''Draw a card from the deck'''
     return random.choice(cards)
 
 
-def showResult(playerSum, computerSum):
+def show_result(player_sum, computer_sum):
     '''Show the result of the game'''
     
-    if playerSum == -1:
+    if player_sum == -1:
         print("Blackjack! You win")
-    elif computerSum == -1:
+    elif computer_sum == -1:
         print("Computer has Blackjack! You lose")
-    elif playerSum > 21:
+    elif player_sum > 21:
         print("Bust! You lose")
-    elif computerSum > 21:
+    elif computer_sum > 21:
         print("Computer bust! You win")
-    elif playerSum >= computerSum:
+    elif player_sum >= computer_sum:
         print("You win")
     else:
         print("You lose")
         
-def playAgain():
+def play_again():
     '''Ask the player if they want to play again'''
     
-    playAgain = input("Do you want to play a game of Blackjack? Type 'y' or 'n': ")
-    if playAgain == 'y':
+    play_again = input("Do you want to play a game of Blackjack? Type 'y' or 'n': ")
+    if play_again == 'y':
         return True
         
     return False
 
-def playerTurn(playerHand):
+def player_turn(player_hand):
     '''Player's turn. Keep drawing cards until the player decides to pass or goes over 21'''
-    keepDrawing = True
+    keep_drawing = True
     
-    while keepDrawing:
+    while keep_drawing:
         draw = input("Type 'y' to get another card, 'n' to pass: ")
         if draw == 'y':
-            playerHand.append(drawCard())
+            player_hand.append(draw_card())
             
-            if sum(playerHand) == 21 and playerHand.len() == 2:
+            if sum(player_hand) == 21 and player_hand.len() == 2:
                 return -1
-            elif sum(playerHand) > 21:
+            elif sum(player_hand) > 21:
                 
                 # if player has an Ace and the total is over 21, change the value of the Ace to 1
-                if 11 in playerHand:
-                    playerHand[playerHand.index(11)] = 1
+                if 11 in player_hand:
+                    player_hand[player_hand.index(11)] = 1
                 else:
-                    keepDrawing = False
+                    keep_drawing = False
         else:
-            keepDrawing = False
-        print(f"Your current hand: {playerHand}")
+            keep_drawing = False
+        print(f"Your current hand: {player_hand}")
         
-    return sum(playerHand)
+    return sum(player_hand)
             
-def computerTurn(computerHand):
+def computer_turn(computer_hand):
     '''Computer's turn. Keep drawing cards until the total is 17 or more'''
     
-    while sum(computerHand) < 17:
-        computerHand.append(drawCard())
+    while sum(computer_hand) < 17:
+        computer_hand.append(draw_card())
         
-        if sum(computerHand) > 21:
-            if 11 in computerHand:
-                    computerHand[computerHand.index(11)] = 1
+        if sum(computer_hand) > 21:
+            if 11 in computer_hand:
+                    computer_hand[computer_hand.index(11)] = 1
             else:
                 break
     
-    print(f"Computer hand: {computerHand}")        
-    return sum(computerHand)
+    print(f"Computer hand: {computer_hand}")        
+    return sum(computer_hand)
 
-def newGame():
+def new_game():
     '''Start a new game of Blackjack'''
-    playerHand = []
-    computerHand = []
+    player_hand = []
+    computer_hand = []
     
     #deal two cards to each player and print the first card of the computer
     for i in range(2):
-        playerHand.append(drawCard())
-        computerHand.append(drawCard())
+        player_hand.append(draw_card())
+        computer_hand.append(draw_card())
         
-    print(f"Your cards {playerHand}")
-    print(f"Computer first card: {computerHand[0]}")
+    print(f"Your cards {player_hand}")
+    print(f"Computer first card: {computer_hand[0]}")
     
     #Player's turn if not already blackjack.
     #  Stop if the player goes over 21
-    if sum(playerHand) == 21:
-        playerSum = -1
+    if sum(player_hand) == 21:
+        player_sum = -1
     else:
-        playerSum = playerTurn(playerHand)
+        player_sum = player_turn(player_hand)
     
     #Computer's turn if player didn't bust or got Blackjack
     # Computer must draw cards until the total is 17 or more
-    if playerSum != -1 and playerSum <= 21:
-        computerSum = computerTurn(computerHand)
+    if player_sum != -1 and player_sum <= 21:
+        computer_sum = computer_turn(computer_hand)
     else:
-        computerSum = sum(computerHand)
+        computer_sum = sum(computer_hand)
         
-    showResult(playerSum, computerSum)
+    show_result(player_sum, computer_sum)
 
 print(logo)
-while playAgain():
-    newGame()
+while play_again():
+    new_game()

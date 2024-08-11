@@ -4,13 +4,13 @@ alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j",
 
 restart = True
 #TODO 1 - import art
-import caesarCipher_art
-print(caesarCipher_art.caesarCipherLogo)
+import caesar_cipher_art as caesar_cipher_art
+print(caesar_cipher_art.caesar_cipher_logo)
 
 #TODO 4 - Can you figure out a way to ask the user if they want to restart cipher program?
 # Create a new function to restart everything if they type 'yes
 
-def newInput():
+def new_input():
     direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n")
     text = input("Enter your message:\n").lower()
     shift = int(input("Enter the shift number:\n"))
@@ -18,7 +18,7 @@ def newInput():
 
 
 def caesar(direction, text, shift):
-    outputText = ""
+    output_text = ""
     
     if direction == "decode":
         shift *= -1
@@ -27,23 +27,23 @@ def caesar(direction, text, shift):
         #TODO3 - What happens if user enters a number/special character?
         # Can you make the code handle that by keeping symbol or number
         if letter not in alphabet:
-            outputText += letter
+            output_text += letter
             continue
         
         position = alphabet.index(letter)
-        newPosition = ((position + shift) % (len(alphabet)))
-        outputText += alphabet[newPosition]
+        new_position = ((position + shift) % (len(alphabet)))
+        output_text += alphabet[new_position]
         
-    print(f"The {direction}d text is: {outputText}\n\n")
+    print(f"The {direction}d text is: {output_text}\n\n")
     
 #TODO2 - What if the user enters a shift that is greater than the number of letters in the alphabet?
 
 
 while restart:
-    newInput()
+    new_input()
     
     print("Would you like to restart the cipher program?")
-    tryAgain = input("Type 'yes' if you want to go again. Otherwise type 'no':\n").lower()
-    if tryAgain != "yes":
+    try_again = input("Type 'yes' if you want to go again. Otherwise type 'no':\n").lower()
+    if try_again != "yes":
         print("Goodbye!")
         break

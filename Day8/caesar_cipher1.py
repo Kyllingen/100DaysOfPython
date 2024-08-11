@@ -14,12 +14,12 @@ shift = int(input("Enter the shift number:\n"))
 # print the encrypted text.
 
 def encrypt(text, shift):
-    encryptedText=""
+    encrypted_text=""
     for letter in text:
         position = alphabet.index(letter)
-        newPosition = ((position + shift) % (len(alphabet)))
-        encryptedText += alphabet[newPosition]
-    print(f"The encoded text is {encryptedText}")
+        new_position = ((position + shift) % (len(alphabet)))
+        encrypted_text += alphabet[new_position]
+    print(f"The encoded text is {encrypted_text}")
 
 #TODO-3: Call the 'encrypt' function and pass in the user inputs.
 # You should be able to test the code and encrypt a message.

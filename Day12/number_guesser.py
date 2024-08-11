@@ -11,17 +11,17 @@
 "You got it! The answer was xx"
 
 import random
-import numberGuesser_art
+import number_guesser_art as number_guesser_art
 
 EASY_DIFFICULTY = 10
 HARD_DIFFICULTY = 5
 
-def setNumberToGuess():
+def set_number_to_guess():
     '''Set the number to guess'''
     print("Im thinking of a number between 1 and 100")
     return random.randint(1, 100)
 
-def setDifficulty():
+def set_difficulty():
     '''Set the difficulty level - number of guesses'''
     difficulty = input("Choose a difficulty. Type 'easy' or 'hard':")
     if difficulty == 'hard':
@@ -29,29 +29,29 @@ def setDifficulty():
     else:
         return EASY_DIFFICULTY
 
-def playGame(numberToGuess, guessesLeft):
+def play_game(number_to_guess, guesses_left):
     ''' Guess number whilst there are guesses left'''
-    while guessesLeft > 0:
-        print(f"Guess the number. You have {guessesLeft} attempts remaining")
+    while guesses_left > 0:
+        print(f"Guess the number. You have {guesses_left} attempts remaining")
         guess = int(input("Make a guess: "))
         
-        if guess > numberToGuess:
+        if guess > number_to_guess:
             print("Too High")
-        elif guess < numberToGuess:
+        elif guess < number_to_guess:
             print("Too Low")
         else:
-            print(f"You got it! The answer was {numberToGuess}")
+            print(f"You got it! The answer was {number_to_guess}")
             return #Exit the function. We have guessed the number
         
-        guessesLeft -= 1
+        guesses_left -= 1
     
     #If we get here, we have run out of guesses
     print("Youve run out of guesses, you lose")
 
-logo = numberGuesser_art.logo
+logo = number_guesser_art.logo
 
 print(logo)
 print("Welcome to the Number Guessing Game")
-numberToGuess = setNumberToGuess()
-guessesLeft = setDifficulty()
-playGame(numberToGuess, guessesLeft)
+number_to_guess = set_number_to_guess()
+guesses_left = set_difficulty()
+play_game(number_to_guess, guesses_left)
