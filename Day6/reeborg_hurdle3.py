@@ -1,5 +1,5 @@
 # look at reeborg.ca Hurdle3 challenge and use the following code
-def turnRight():
+def turn_right():
     turn_left()
     turn_left()
     turn_left()
@@ -7,9 +7,9 @@ def turnRight():
 def jump():
     turn_left()
     move()
-    turnRight()
+    turn_right()
     move()
-    turnRight()
+    turn_right()
     move()
     turn_left()
     

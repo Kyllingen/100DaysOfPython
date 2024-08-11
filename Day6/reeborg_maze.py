@@ -1,5 +1,5 @@
 # look at reeborg.ca Maze challenge and use the following code
-def turnRight():
+def turn_right():
     turn_left()
     turn_left()
     turn_left()
@@ -14,12 +14,12 @@ turn_left()
 while not at_goal():
     if wall_in_front():
         if not wall_on_right():
-            turnRight()
+            turn_right()
             move()
         else:
             turn_left()
     elif not wall_on_right():
-        turnRight()
+        turn_right()
         move()
     else:
         move()

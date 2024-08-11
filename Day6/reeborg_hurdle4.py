@@ -1,5 +1,5 @@
 # look at reeborg.ca Hurdle4 challenge and use the following code
-def turnRight():
+def turn_right():
     turn_left()
     turn_left()
     turn_left()
@@ -8,9 +8,9 @@ def jump():
     turn_left()
     while wall_on_right():
         move()
-    turnRight()
+    turn_right()
     move()
-    turnRight()
+    turn_right()
     while front_is_clear():
         move()
     turn_left()

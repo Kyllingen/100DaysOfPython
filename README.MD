@@ -81,7 +81,7 @@ Some exercises are done in Auditorium as per course notes and the results from t
     * Quiz Project
     * init methods, class constructors
     * methods and attributes
-
+* Day 18 - Tuples, Importing Modules and Graphics on Turtle Graphics
     
     
     

@@ -29,22 +29,22 @@ scissors = '''
 ''' 
 
 list = [rock, paper, scissors]
-resultList = [["It's a draw", "You lose", "You win"], 
+result_list = [["It's a draw", "You lose", "You win"], 
              ["You win", "It's a draw", "You lose"], 
              ["You lose", "You win", "It's a draw"]]
 
 print("What do you choose? Type 0 for Rock, 1 for Paper or 2 for Scissors.")
-userChoice = int(input())
+user_choice = int(input())
 
 # Logic
-if userChoice >= 3 or userChoice < 0:
+if user_choice >= 3 or user_choice < 0:
     print("You typed an invalid number, you lose!")
     
-computerChoice = random.randint(0, 2)
-result = resultList[userChoice][computerChoice]
+computer_choice = random.randint(0, 2)
+result = result_list[user_choice][computer_choice]
 
 # Game output
-print(list[userChoice] + "\n")
+print(list[user_choice] + "\n")
 print("Computer chose:\n")
-print(list[computerChoice] + "\n")
+print(list[computer_choice] + "\n")
 print(result)

@@ -11,11 +11,11 @@ count3 = name1.lower().count('l') + name1.lower().count('o') + name1.lower().cou
 count4 = name2.lower().count('l') + name2.lower().count('o') + name2.lower().count('v') + name2.lower().count('e')
 count3 += count4             
 
-totalCount = int(str(count1) + str(count3))
+total_count = int(str(count1) + str(count3))
 
-if totalCount < 10 or totalCount > 90:
-    print(f"Your score is {totalCount}, you go together like coke and mentos.")
-elif totalCount >= 40 and totalCount <= 50:
-    print(f"Your score is {totalCount}, you are alright together.")
+if total_count < 10 or total_count > 90:
+    print(f"Your score is {total_count}, you go together like coke and mentos.")
+elif total_count >= 40 and total_count <= 50:
+    print(f"Your score is {total_count}, you are alright together.")
 else:
-    print(f"Your score is {totalCount}.")
+    print(f"Your score is {total_count}.")

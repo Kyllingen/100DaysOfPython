@@ -11,39 +11,39 @@ numbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
 symbols = ['!', '#', '$', '%', '&', '(', ')', '*', '+']
 
 print("Welcome to the PyPassword Generator!")
-numLetters = int(input("How many letters would you like in your password?"))
-numSymbols = int(input("How many symbols would you like?"))
-numNumbers = int(input("How many numbers would you like?"))
+num_letters = int(input("How many letters would you like in your password?"))
+num_symbols = int(input("How many symbols would you like?"))
+num_numbers = int(input("How many numbers would you like?"))
 
-totalLength = numLetters + numSymbols + numNumbers
+total_length = num_letters + num_symbols + num_numbers
 list = ["letters", "symbols", "numbers"]
 
 password = ""
 
 #this could have been simplifed by using random.shuffle(), but keeping this as a solution
-for i in range(0, totalLength):
+for i in range(0, total_length):
     
-    randomChoice = random.randint(0, len(list)-1)
+    random_choice = random.randint(0, len(list)-1)
     
-    if list[randomChoice] == "letters":
+    if list[random_choice] == "letters":
         password += random.choice(letters)
-        numLetters -= 1
-    elif list[randomChoice] == "symbols":
+        num_letters -= 1
+    elif list[random_choice] == "symbols":
         password += random.choice(symbols)
-        numSymbols -= 1
+        num_symbols -= 1
     else:
         password += random.choice(numbers)
-        numNumbers -= 1
+        num_numbers -= 1
     
-    if numLetters == 0:
+    if num_letters == 0:
         list.remove("letters")
-        numLetters = -1
-    if numSymbols == 0:
+        num_letters = -1
+    if num_symbols == 0:
         list.remove("symbols")
-        numSymbols = -1
-    if numNumbers == 0:
+        num_symbols = -1
+    if num_numbers == 0:
         list.remove("numbers")
-        numNumbers = -1
+        num_numbers = -1
         
     
 

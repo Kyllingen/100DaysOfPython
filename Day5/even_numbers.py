@@ -1,7 +1,7 @@
 target = int(input("Enter target number to add up to:"))
 
-evenSum = 0
+even_sum = 0
 for i in range(0, target + 1, 2):
-    evenSum += i
+    even_sum += i
     
-print(evenSum)
+print(even_sum)

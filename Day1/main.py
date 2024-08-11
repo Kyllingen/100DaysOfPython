@@ -9,5 +9,5 @@ print("Hello " + "Angela")
 
 #input and variable use. Use input and add result to a variable
 name = input("What is your name? ")
-nameLen = len(name)
-print(name, nameLen)
+name_len = len(name)
+print(name, name_len)
