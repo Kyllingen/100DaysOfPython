@@ -8,26 +8,26 @@ resources = {
     "money": 0
 }
 
-def printReport():
+def print_report():
     ''' print the report of resources left and money collected'''
     print(f"Water: {resources['water']}ml")
     print(f"Milk: {resources['milk']}ml")
     print(f"Coffee: {resources['coffee']}g")
     print(f"Money: ${resources['money']}")
     
-def checkResources(coffee):
+def check_resources(coffee):
     '''Check if there are enough resources to make the coffee'''
     ingredients = MENU[coffee]["ingredients"]
-    enoughResources = True
+    enough_resources = True
     
     for key in ingredients:
         if resources[key] < ingredients[key]:
             print(f"Sorry there is not enough of {key}")
-            enoughResources = False
+            enough_resources = False
             
-    return enoughResources
+    return enough_resources
 
-def insertCoins():
+def insert_coins():
     '''Process the coins inserted'''
     print("Please insert coins")
     quarters = int(input("How many quarters?: "))
@@ -35,10 +35,10 @@ def insertCoins():
     nickels = int(input("How many nickels?: "))
     pennies = int(input("How many pennies?: "))
     
-    dollarSum = quarters * 0.25 + dimes * 0.10 + nickels * 0.05 + pennies * 0.01
-    return dollarSum
+    dollar_sum = quarters * 0.25 + dimes * 0.10 + nickels * 0.05 + pennies * 0.01
+    return dollar_sum
 
-def transactCoffee(coffee, payment):
+def transact_coffee(coffee, payment):
     '''Check if the transaction is successful'''
     cost = MENU[coffee]["cost"]
     if payment >= cost:
@@ -50,7 +50,7 @@ def transactCoffee(coffee, payment):
         print("Sorry that's not enough money. Money refunded")
         return False
 
-def makeCoffee(coffee):
+def make_coffee(coffee):
     '''Make the coffee'''
     ingredients = MENU[coffee]["ingredients"]
     for key in ingredients:
@@ -58,14 +58,14 @@ def makeCoffee(coffee):
     print(f"Here is your {coffee}. Enjoy!")
 
     
-def processCoffee(coffee):
+def process_coffee(coffee):
     ''' Process the coffee command'''
-    if checkResources(coffee):
-        payment = insertCoins()
-        if transactCoffee(coffee, payment):
-           makeCoffee(coffee)
+    if check_resources(coffee):
+        payment = insert_coins()
+        if transact_coffee(coffee, payment):
+           make_coffee(coffee)
 
-def refillResources():
+def refill_resources():
     '''Refill the resources in the coffee machine'''
     water = int( input("How much water would you like to refill? ml: "))
     resources["water"] += water
@@ -76,22 +76,22 @@ def refillResources():
     print("Resources refilled")
             
 
-def checkCommand(command):
+def check_command(command):
     ''' Check which command was sent and if its valid'''
     if command == "off":
         return command
     elif command == "report":
-        printReport()
+        print_report()
     elif command == "refill":
-        refillResources()
+        refill_resources()
     elif command in MENU:
-        processCoffee(command)
+        process_coffee(command)
     else:
         print("Invalid command")
         True
 
 
-def startMachine():
+def start_machine():
     '''Start the coffee machine'''
     command = ""
     print("Welcome to the coffee machine")
@@ -99,7 +99,7 @@ def startMachine():
     while command != "off":
         command = input(f"What would you like? (espresso/latte/cappuccino): ").lower()
         
-        checkCommand(command)
+        check_command(command)
         
 
-startMachine()
+start_machine()
