@@ -82,6 +82,10 @@ Some exercises are done in Auditorium as per course notes and the results from t
     * init methods, class constructors
     * methods and attributes
 * Day 18 - Tuples, Importing Modules and Graphics on Turtle Graphics
-    
+    * Turtles module
+    * import module best practices
+    * aliasing - import turtle as t
+    * virtual environments (venv)
+    * tuples - (x, y, z) - immutable as opposed to list
     
     
