@@ -87,5 +87,10 @@ Some exercises are done in Auditorium as per course notes and the results from t
     * aliasing - import turtle as t
     * virtual environments (venv)
     * tuples - (x, y, z) - immutable as opposed to list
+* Day 19 - More Turtle Graphics, Event Listeners, State and Multiple Instances
+    * Etch a sketch project
+    * Turtle racing game
+    * Key event listeners
+    * Higher Order Functions - functions having functions as params
     
     
