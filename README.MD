@@ -92,5 +92,6 @@ Some exercises are done in Auditorium as per course notes and the results from t
     * Turtle racing game
     * Key event listeners
     * Higher Order Functions - functions having functions as params
+* Day 20 - Snake game
     
     
