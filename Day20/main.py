@@ -16,9 +16,6 @@ def initialize_screen():
     
     return screen
 
-
-# move the snake
-
 # create a snake food
 
 #detect collision with food
@@ -32,6 +29,13 @@ def initialize_screen():
 screen = initialize_screen()
 
 snake = Snake()
+
+screen.listen()
+screen.onkey(key="Up", fun=snake.up)
+screen.onkey(key="Down", fun=snake.down)
+screen.onkey(key="Left", fun=snake.left)
+screen.onkey(key="Right", fun=snake.right)
+
 
 while game_is_on:
     screen.update()
