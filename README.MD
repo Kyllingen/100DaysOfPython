@@ -93,5 +93,8 @@ Some exercises are done in Auditorium as per course notes and the results from t
     * Key event listeners
     * Higher Order Functions - functions having functions as params
 * Day 20 - Snake game
+* Day 21 - Snake game part 2
+    * Inheritance
+    * Slicing
     
     
