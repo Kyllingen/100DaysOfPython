@@ -96,5 +96,7 @@ Some exercises are done in Auditorium as per course notes and the results from t
 * Day 21 - Snake game part 2
     * Inheritance
     * Slicing
+* Day 22 - Pong Game
+
     
     
