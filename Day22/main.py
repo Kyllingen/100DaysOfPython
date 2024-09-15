@@ -42,17 +42,18 @@ def setup_court():
         pen.goto(pen.xcor(), pen.ycor()+10)
         pen.penup()
         pen.goto(pen.xcor(), pen.ycor()+10)
-
  
 # initialize objects   
 screen = init_screen()
-setup_court()
-paddle = Paddle()
-
 screen.listen()
-screen.onkey(key="Up", fun=paddle.up)
-screen.onkey(key="Down", fun=paddle.down)
+setup_court()
+paddle_right = Paddle((350,0))
+paddle_left = Paddle((-350,0))
 
+screen.onkey(key="Up", fun=paddle_right.up)
+screen.onkey(key="Down", fun=paddle_right.down)
+screen.onkey(key="w", fun=paddle_left.up)
+screen.onkey(key="s", fun=paddle_left.down)
 
 # Game loop
 while game_on: 

@@ -1,26 +1,26 @@
 from turtle import Turtle
 
-class Paddle:
+class Paddle(Turtle):
     
-    paddle = None
     MOVE_STEP = 20
     
-    def __init__(self):
+    def __init__(self, starting_pos):
         ''' create the paddle and position it'''
-        self.paddle = Turtle(shape="square")
-        self.paddle.hideturtle()
-        self.paddle.color("white")
-        self.paddle.turtlesize(stretch_wid=5, stretch_len=1)
-        self.paddle.penup()
-        self.paddle.goto(350, 0)
-        self.paddle.showturtle()
+        super().__init__()
+        self.shape("square")
+        self.hideturtle()
+        self.color("white")
+        self.shapesize(stretch_wid=5, stretch_len=1)
+        self.penup()
+        self.goto(starting_pos[0], starting_pos[1])
+        self.showturtle()
         
     def up(self):
         ''' move padle up MOVE_STEP units'''
-        if self.paddle.ycor() + 50 < 300:
-            self.paddle.goto(self.paddle.xcor(), self.paddle.ycor()+self.MOVE_STEP)
+        if self.ycor() + 50 < 300:
+            self.goto(self.xcor(), self.ycor()+self.MOVE_STEP)
     
     def down(self):
         ''' move padle up MOVE_STEP units'''
-        if self.paddle.ycor() - 50 > -300:
-            self.paddle.goto(self.paddle.xcor(), self.paddle.ycor()-self.MOVE_STEP)
+        if self.ycor() - 50 > -300:
+            self.goto(self.xcor(), self.ycor()-self.MOVE_STEP)
