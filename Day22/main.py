@@ -1,7 +1,7 @@
 #Imports
 from turtle import Turtle, Screen
 from paddle import Paddle
-import random
+from ball import Ball
 import time
 
 # definitions
@@ -55,10 +55,13 @@ screen.onkey(key="Down", fun=paddle_right.down)
 screen.onkey(key="w", fun=paddle_left.up)
 screen.onkey(key="s", fun=paddle_left.down)
 
+ball = Ball()
+
 # Game loop
 while game_on: 
     screen.update()
     time.sleep(0.09)
+    ball.move()
     
 
 
