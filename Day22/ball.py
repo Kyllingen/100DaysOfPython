@@ -11,28 +11,25 @@ class Ball(Turtle):
         self.color("white")
         self.penup()
         
+        self.x_move = 10
+        self.y_move = 10
+        
         #set initial heading NE
         angle = self.towards(300,300)
-        self.setheading(angle)
+        #self.setheading(angle)
         
         
     def move(self):
         '''move the ball'''
-        self.forward(15)
+        new_x = self.xcor() + self.x_move
+        new_y = self.ycor() + self.y_move
+        self.goto(new_x, new_y)
         
-    def bounce(self):
+    def bounce(self, hit_paddle=False):
         '''bounces and changes direction'''
-        current_angle = self.heading()
-        random_add = random.randint(-5, 5)
-        current_angle += random_add
-        
-        if current_angle >= 0 and current_angle < 90:
-            self.setheading(current_angle-90)
-        elif current_angle >= 90 and current_angle < 180:
-            self.setheading(current_angle+90)
-        elif current_angle >= 180 and current_angle < 270:
-            self.setheading(current_angle-90)
+        added_change = random.randint(-2, 2)
+        if hit_paddle:
+            self.x_move =- self.x_move + added_change
         else:
-            self.setheading(current_angle+90-360)
-        
+            self.y_move =- self.y_move + added_change
         
