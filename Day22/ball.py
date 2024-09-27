@@ -14,8 +14,10 @@ class Ball(Turtle):
         self.x_move = 10
         self.y_move = 10
         
+        self.move_speed = 0.1
+        
         #set initial heading NE
-        angle = self.towards(300,300)
+        self.towards(300,300)
         
         
     def move(self):
@@ -26,14 +28,15 @@ class Ball(Turtle):
         
     def bounce(self, hit_paddle=False):
         '''bounces and changes direction'''
-        added_change = random.randint(-5, 5)
+
         if hit_paddle:
-            self.x_move =- self.x_move + added_change
+            self.x_move = -self.x_move 
+            self.move_speed *= 0.9
         else:
-            self.y_move =- self.y_move + added_change
+            self.y_move = -self.y_move 
         
     def reset(self):
         '''reset ball and send ball in opposite direction'''
         self.setposition(0,0)
-        self.x_move =- self.x_move
-        self.y_move = random.randint(-20,20)
+        self.x_move = -self.x_move
+        self.move_speed = 0.1

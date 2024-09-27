@@ -2,6 +2,7 @@
 from turtle import Turtle, Screen
 from paddle import Paddle
 from ball import Ball
+from scoreboard import Scoreboard
 import time
 
 # definitions
@@ -50,6 +51,9 @@ setup_court()
 paddle_right = Paddle((350,0))
 paddle_left = Paddle((-350,0))
 
+scoreboard = Scoreboard()
+scoreboard.update_scoreboard()
+
 screen.onkey(key="Up", fun=paddle_right.up)
 screen.onkey(key="Down", fun=paddle_right.down)
 screen.onkey(key="w", fun=paddle_left.up)
@@ -60,7 +64,7 @@ ball = Ball()
 # Game loop
 while game_on: 
     screen.update()
-    time.sleep(0.09)
+    time.sleep(ball.move_speed)
     ball.move()
     
     # detect collision with wall
@@ -71,12 +75,15 @@ while game_on:
     if (ball.distance(paddle_right) < 50 and ball.xcor() > 320) or (ball.distance(paddle_left) < 50 and ball.xcor() < -320):
         ball.bounce(hit_paddle=True)
         
-    # detect if out of bounds
+    # detect if out of bounds right hand
     if ball.xcor() > 400:  
         ball.reset()
+        scoreboard.update_score_left()
     
+    # detect if out of bounds left hand side
     if ball.xcor() < -400:
         ball.reset()
+        scoreboard.update_score_right()
     
 
 
