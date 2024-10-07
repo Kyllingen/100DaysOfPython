@@ -97,6 +97,7 @@ Some exercises are done in Auditorium as per course notes and the results from t
     * Inheritance
     * Slicing
 * Day 22 - Pong Game
+* Day 23 - Turtle Crossing Game
 
     
     
