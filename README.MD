@@ -98,6 +98,9 @@ Some exercises are done in Auditorium as per course notes and the results from t
     * Slicing
 * Day 22 - Pong Game
 * Day 23 - Turtle Crossing Game
+* Day 24 - File System
+  * Remember high score in Snake Game
+  * Personalize letters
 
     
     
