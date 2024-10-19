@@ -10,8 +10,11 @@ class Scoreboard(Turtle):
         ''' initializes the scoreboard'''
         super().__init__()
         
-                
-        self.high_score = 0
+        #read high score from file. 
+        #Assume file exists and only contains an int
+        with open("data.txt") as file:
+            self.high_score = int(file.read())
+        
         self.score = -1
         
         self.penup()
@@ -32,6 +35,9 @@ class Scoreboard(Turtle):
         ''' check for high score and reset'''
         if self.score > self.high_score:
             self.high_score = self.score
+            
+            with open("data.txt", "w") as file:
+                file.write(str(self.high_score))
         
         self.score = -1
         self.update_score()
