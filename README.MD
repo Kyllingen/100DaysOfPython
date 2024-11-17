@@ -104,6 +104,8 @@ Some exercises are done in Auditorium as per course notes and the results from t
 * Day 25 - CSV files and Pandas
     * US States map Quiz
     * Weather data
-    * Squirrel Data samples
-    
+    * Squirrel Data 
+* Day 26 - List and Dictionary Comprehensions
+    * Squaring, Filtering
+    * NATO game
     
