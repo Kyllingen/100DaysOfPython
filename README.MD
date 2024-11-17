@@ -101,6 +101,9 @@ Some exercises are done in Auditorium as per course notes and the results from t
 * Day 24 - File System
   * Remember high score in Snake Game
   * Personalize letters
-
+* Day 25 - CSV files and Pandas
+    * US States map Quiz
+    * Weather data
+    * Squirrel Data samples
     
     

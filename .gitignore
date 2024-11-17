@@ -166,3 +166,4 @@ cython_debug/
 
 #Project specifics
 Day24/mail_merge/Output/
+Day25/*/*.csv
