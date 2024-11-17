@@ -24,23 +24,31 @@ def correct_state(state):
     '''adds correct state to map'''
     states_found.append(answer_row.state.values[0])
     
-    x_pos = state.x.values[0]
-    y_pos = state.y.values[0]
+    x_pos = state.x.item()
+    y_pos = state.y.item()
     
     writer.penup()
     writer.setposition(x_pos, y_pos)
     writer.pendown()
-    writer.write(answer_row.state.values[0])
+    writer.write(answer_row.state.item())
 
     
 
 
-while( not game_over):
+while len(states_found) < max_states:
     answer_state = screen.textinput(title=f"{score}/{max_states} States Correct", prompt="What'state's name?")
     answer_row = states_data.loc[states_data["state"].str.lower() == answer_state.lower()]
 
-    if not answer_row.empty and answer_row.state.values[0] not in states_found:
+    if answer_state == "Exit":
+        break
+    
+    if not answer_row.empty and answer_row.state.item() not in states_found:
         score += 1
         correct_state(answer_row)
         
-    
+        
+# save states not found
+states_not_found = states_data[~states_data["state"].isin(states_found)]
+states_not_found.state.to_csv("states_to_learn.csv")
+        
+screen.exitonclick()
