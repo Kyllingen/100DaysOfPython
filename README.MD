@@ -108,4 +108,11 @@ Some exercises are done in Auditorium as per course notes and the results from t
 * Day 26 - List and Dictionary Comprehensions
     * Squaring, Filtering
     * NATO game
+* Day 27 - Graphical User Interfaces
+    * Tkinter GUI kit
+    * Draw GUI elements, inputs and respond to inputs
+    * Functional Arguments
+    * Default arguments
+    * Unlimited Positional arguments - *args
+    * Many Keyworded Arguments **kwargs
     
