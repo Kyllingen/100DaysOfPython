@@ -115,4 +115,7 @@ Some exercises are done in Auditorium as per course notes and the results from t
     * Default arguments
     * Unlimited Positional arguments - *args
     * Many Keyworded Arguments **kwargs
-    
+* Day28 - More Advanced TKinter
+    * Create a Pomodoro App
+    * Canvas Widget & Adding Images
+    * Dynamic Typing
