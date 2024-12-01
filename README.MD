@@ -119,3 +119,4 @@ Some exercises are done in Auditorium as per course notes and the results from t
     * Create a Pomodoro App
     * Canvas Widget & Adding Images
     * Dynamic Typing
+* Day29 - Password Manager Project
