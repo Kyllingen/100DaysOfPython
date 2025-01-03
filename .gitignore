@@ -167,3 +167,4 @@ cython_debug/
 #Project specifics
 Day24/mail_merge/Output/
 *.csv
+Day29/database.txt
