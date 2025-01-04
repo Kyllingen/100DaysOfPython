@@ -2,6 +2,7 @@ from tkinter import *
 from tkinter import messagebox
 import random
 import pyperclip
+import json
 
 WHITE = "#FFFFFF"
 
@@ -36,29 +37,69 @@ def generate_password():
     pyperclip.copy(password)
     
     
+# ---------------------------- SEARCH WEBSITE ------------------------------- #
+def search_website():
+    ''' find password in datafile'''
+    website = web_input.get()
+    
+    # Empty input, return
+    if len(website) == 0:
+        messagebox.showinfo(title="Missing Information", message="No website to search for.")
+        return
+    
+    data = read_file()
+    
+    try:
+         result = data[website]
+         print(result)
+    except KeyError:
+         messagebox.showinfo(title="No Password Found", message="No data found for website")
+    else:
+         messagebox.showinfo(title=f"{website}", message=f"Email: {result['email']}\nPassword:{result['password']}")
 
         
 # ---------------------------- SAVE PASSWORD ------------------------------- #
+def read_file(data=None):
+    ''' reads file, creates new one if file does not exist'''
+    result = {}
+    try:        
+        with open("database.json", "r") as file:
+            result = json.load(file)
+    except FileNotFoundError:
+            write_file()
+    except json.JSONDecodeError:
+            None
+    finally:
+            if data:
+                result.update(data)
+            
+    return result
+
+def write_file(data = None):
+     '''updates file with new content'''
+     with open("database.json", "w") as file:
+            if data:
+                json.dump(data, file, indent=2)
+                web_input.delete(0, END)
+                password_input.delete(0, END)
+
 def save_password():
     '''Saves password and corresponding mail and website'''
     email = mail_input.get()
     website = web_input.get()
     password = password_input.get()
     
+    new_data = {website: {
+        "email": email,
+        "password": password
+    }}
+    
     if len(website) < 1 or len(password) < 1:
         messagebox.showinfo(title="Missing Information", message="Password/Website is empty. Cannot save")
         return
-    
-    isok = messagebox.askokcancel(title=website, message=f"these are the details entered\nEmail: {email}\nPassword: {password}\nSave or cancel?")
-    
-    if isok:
-        #append to file
-        with open("database.txt", "a") as file:
-            file.write(f"{email}|{website}|{password}\n")
-            
-        web_input.delete(0, END)
-        password_input.delete(0, END)
-
+    else:
+        data = read_file(new_data)
+        write_file(data)
 
 # ---------------------------- UI SETUP ------------------------------- #
 window = Tk()
@@ -74,8 +115,12 @@ canvas.grid(column=1, row=0)
 # Website
 web_label = Label(text="Website:", bg=WHITE, pady=5)
 web_label.grid(column=0, row=1)
-web_input = Entry(width=35)
-web_input.grid(column=1, row=1, columnspan=2, sticky=W, padx=5)
+web_input = Entry(width=21)
+web_input.grid(column=1, row=1, sticky=W, padx=5)
+
+#Search button
+search_button = Button(text="Search", width=20, command=search_website)
+search_button.grid(column=2, row=1, sticky=W)
 
 #Email/Username
 mail_label = Label(text="Email/Username:", bg=WHITE, pady=5)
