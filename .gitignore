@@ -168,3 +168,4 @@ cython_debug/
 Day24/mail_merge/Output/
 *.csv
 Day29/database.txt
+Day30/*.txt
