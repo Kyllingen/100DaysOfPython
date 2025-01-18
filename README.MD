@@ -122,3 +122,5 @@ Some exercises are done in Auditorium as per course notes and the results from t
 * Day29 - Password Manager Project
 * Day30 - Errors, Exceptions and Saving JSON Data
 * Day31 - Capstone Project - Flash Card Program
+* Day32 - Email SMTP and Datetime module
+    * Automate happy birthday email
