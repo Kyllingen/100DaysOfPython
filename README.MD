@@ -124,3 +124,5 @@ Some exercises are done in Auditorium as per course notes and the results from t
 * Day31 - Capstone Project - Flash Card Program
 * Day32 - Email SMTP and Datetime module
     * Automate happy birthday email
+* Day33 - Application Programming Interfaces (APIs)
+    * ISS Tracker Project
