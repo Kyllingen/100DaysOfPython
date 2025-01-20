@@ -57,7 +57,6 @@ def send_email(email:str, letter:str, data: dict):
 
 
 config = readfile("../.config.json")
-print(config)
 birthdays = get_birthdays()
 
 if not birthdays.empty:
