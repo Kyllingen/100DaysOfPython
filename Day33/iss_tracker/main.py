@@ -98,6 +98,6 @@ while True:
             print("Sending email")
             send_email(config)
         
-        time.sleep(60)
+    time.sleep(60)
 
 
