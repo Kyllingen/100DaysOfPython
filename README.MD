@@ -126,3 +126,4 @@ Some exercises are done in Auditorium as per course notes and the results from t
     * Automate happy birthday email
 * Day33 - Application Programming Interfaces (APIs)
     * ISS Tracker Project
+* Day34 - API Trivia and Quizzler App
