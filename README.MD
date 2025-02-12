@@ -127,3 +127,6 @@ Some exercises are done in Auditorium as per course notes and the results from t
 * Day33 - Application Programming Interfaces (APIs)
     * ISS Tracker Project
 * Day34 - API Trivia and Quizzler App
+* Day35 - APIs continued and Environment Variables
+    * API Keys & Authentication
+    * Sending SMS project with weather data
