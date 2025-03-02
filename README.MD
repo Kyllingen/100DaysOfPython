@@ -130,3 +130,5 @@ Some exercises are done in Auditorium as per course notes and the results from t
 * Day35 - APIs continued and Environment Variables
     * API Keys & Authentication
     * Sending SMS project with weather data
+* Day36 - Stock Trading Alert App
+    * Stock prices, news alerts
