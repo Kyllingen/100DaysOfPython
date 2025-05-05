@@ -132,3 +132,5 @@ Some exercises are done in Auditorium as per course notes and the results from t
     * Sending SMS project with weather data
 * Day36 - Stock Trading Alert App
     * Stock prices, news alerts
+* Day 37 - Advanced Authentication
+    * POST / PUT / DELETE Requests
